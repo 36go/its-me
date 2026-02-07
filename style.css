@@ -95,6 +95,97 @@ html[dir="rtl"] .skip-link:focus {
   gap: 1rem;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.menu-btn {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-weight: 850;
+}
+
+.menu-btn:hover {
+  border-color: rgba(124, 92, 255, 0.35);
+}
+
+.menu-btn-bars {
+  width: 1.1rem;
+  height: 0.85rem;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(233, 236, 245, 0.88);
+}
+
+.menu-btn-bars::before {
+  top: 0;
+  box-shadow: 0 6px 0 rgba(233, 236, 245, 0.88);
+}
+
+.menu-btn-bars::after {
+  bottom: 0;
+}
+
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: rgba(8, 10, 20, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.mobile-menu-inner {
+  padding: 0.9rem 0 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 800;
+}
+
+.mobile-actions {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.mobile-actions .btn {
+  width: 100%;
+}
+
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+}
+
 .brand {
   display: inline-flex;
   align-items: baseline;
@@ -459,6 +550,30 @@ html[dir="rtl"] .list {
 @media (max-width: 560px) {
   .nav {
     display: none;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+
+  .hero {
+    padding: 2.6rem 0 2rem;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .card-actions .btn {
+    flex: 1 1 9rem;
   }
 
   .footer-inner {
