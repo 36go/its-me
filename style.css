@@ -20,8 +20,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -111,6 +113,8 @@ html[dir="rtl"] .skip-link:focus {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   font-weight: 850;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-btn:hover {
@@ -560,6 +564,16 @@ html[dir="rtl"] .list {
     display: inline-flex;
   }
 
+  .site-header {
+    backdrop-filter: none;
+    background: rgba(8, 10, 20, 0.92);
+  }
+
+  .mobile-menu {
+    backdrop-filter: none;
+    background: rgba(8, 10, 20, 0.94);
+  }
+
   .hero {
     padding: 2.6rem 0 2rem;
   }
@@ -570,6 +584,13 @@ html[dir="rtl"] .list {
 
   .hero-cta .btn {
     width: 100%;
+  }
+
+  .btn,
+  .card,
+  .contact-card,
+  .nav-link {
+    transition: none;
   }
 
   .card-actions .btn {
@@ -584,5 +605,18 @@ html[dir="rtl"] .list {
 
   .contact-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  .btn,
+  .card,
+  .contact-card,
+  .nav-link {
+    transition: none !important;
   }
 }
