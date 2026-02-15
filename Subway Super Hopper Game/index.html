@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Subway | ابزق بوجهي اذا فزت فيها</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
+	<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+	<div class="parallax-bg" aria-hidden="true">
+		<div class="parallax-layer layer-one" data-depth="0.08"></div>
+		<div class="parallax-layer layer-two" data-depth="0.16"></div>
+		<div class="parallax-layer layer-three" data-depth="0.24"></div>
+	</div>
+	<a class="back-home" href="../index.html" aria-label="Back to projects">&#8592; Back</a>
+
+	<main class="site-content">
+		<section class="hero">
+			<div id="game-shell">
+				<div id="game-container"></div>
+
+				<div id="ui-layer">
+					<div id="score-display" class="hidden">
+						<div>SCORE: <span id="score">0</span></div>
+						<div>COINS: <span id="coins">0</span></div>
+					</div>
+
+					<div id="instructions">
+						CONTROLS:<br />
+						<span class="key">&#8592;</span> <span class="key">&#8594;</span> MOVE<br />
+						<span class="key">&#8593;</span> JUMP<br />
+						<span class="small-note">A / D / W OR SWIPE ON PHONE</span>
+					</div>
+
+					<div id="start-screen" class="center-screen">
+						<h1 class="title">SUBWAY SUPER HOPPER</h1>
+						<p class="subtitle">Parallax Edition</p>
+						<button id="start-btn" type="button">PRESS START</button>
+					</div>
+
+					<div id="game-over-screen" class="center-screen hidden">
+						<h1 class="title">GAME OVER</h1>
+						<p class="subtitle">SCORE: <span id="final-score">0</span></p>
+						<p class="subtitle">COINS: <span id="final-coins">0</span></p>
+						<button id="restart-btn" type="button">TRY AGAIN</button>
+					</div>
+				</div>
+
+				<div id="touch-controls">
+					<button id="touch-left" type="button" aria-label="Move left">&#9664;</button>
+					<button id="touch-jump" type="button" aria-label="Jump">&#9650;</button>
+					<button id="touch-right" type="button" aria-label="Move right">&#9654;</button>
+				</div>
+			</div>
+
+			<p class="scroll-hint">Scroll down for more projects</p>
+		</section>
+
+		<section class="projects-section">
+			<h2>Projects / &#1605;&#1588;&#1575;&#1585;&#1610;&#1593;&#1610;</h2>
+			<div class="projects-grid">
+				<a class="project-link" href="https://tajwihiwezariquiz.vercel.app/" target="_blank" rel="noopener noreferrer">Tajwihi Wezari Quiz</a>
+				<a class="project-link" href="https://s-tau-lac.vercel.app/" target="_blank" rel="noopener noreferrer">S Tau Lac</a>
+				<a class="project-link" href="https://kawi-umber.vercel.app/" target="_blank" rel="noopener noreferrer">Kawi Umber</a>
+				<a class="project-link" href="https://me-plum-three.vercel.app/" target="_blank" rel="noopener noreferrer">Me Plum Three</a>
+				<a class="project-link" href="https://btec-brown.vercel.app/" target="_blank" rel="noopener noreferrer">BTEC Brown</a>
+				<a class="project-link" href="https://web-gate-sepia.vercel.app/" target="_blank" rel="noopener noreferrer">Web Gate Sepia</a>
+				<a class="project-link" href="https://worker-five-rosy.vercel.app/" target="_blank" rel="noopener noreferrer">Worker Five Rosy</a>
+			</div>
+		</section>
+	</main>
+
+	<script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+			}
+		}
+	</script>
+	<script type="module" src="./script.js"></script>
+</body>
+</html>

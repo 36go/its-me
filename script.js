@@ -87,7 +87,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.matchMedia("(min-width: 561px)").matches) closeMenu();
+      if (window.matchMedia("(min-width: 761px)").matches) closeMenu();
     });
   }
 })();
