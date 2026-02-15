@@ -26,6 +26,12 @@
   }
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji",
@@ -59,24 +65,20 @@ code {
 }
 
 .skip-link {
-  position: absolute;
-  left: -9999px;
+  position: fixed;
+  inset-inline-start: 1rem;
   top: 0.75rem;
   padding: 0.65rem 0.85rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid var(--stroke);
   box-shadow: var(--shadow);
+  transform: translateY(-180%);
 }
 
 .skip-link:focus {
-  left: 1rem;
   z-index: 999;
-}
-
-html[dir="rtl"] .skip-link:focus {
-  left: auto;
-  right: 1rem;
+  transform: translateY(0);
 }
 
 /* Header */
